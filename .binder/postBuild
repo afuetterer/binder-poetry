@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+# Install Python dependencies
+pip install --upgrade pip poetry
+poetry install
+
+# Display installed versions
+python -V
+poetry -V
+jupyter --version
+pip list
+
+# Install NLTK corpora and tokenizers
+# python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
