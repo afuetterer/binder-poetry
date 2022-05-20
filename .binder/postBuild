@@ -3,24 +3,10 @@
 set -e
 
 # Install Python dependencies
-echo "--- pip install --upgrade pip poetry ---"
 pip install --upgrade pip poetry
-echo "--- poetry lock ---"
 poetry lock
-
-echo "--- poetry export ---"
 poetry export -f requirements.txt > /tmp/requirements.txt
-
-echo "--- cat /tmp/requirements.txt ---"
 cat /tmp/requirements.txt
-
-echo "--- python -V ---"
-python -V
-
-echo "--- poetry -V ---"
-poetry -V
-
-echo "--- pip install ---"
 pip install -r /tmp/requirements.txt
 
 # Display installed versions
