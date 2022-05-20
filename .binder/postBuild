@@ -4,6 +4,7 @@ set -e
 
 # Install Python dependencies
 pip install --upgrade pip poetry
+poetry lock
 poetry export -f requirements.txt > /tmp/requirements.txt
 pip install -r /tmp/requirements.txt
 
