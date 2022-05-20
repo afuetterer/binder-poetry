@@ -26,10 +26,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          pip install --upgrade pip pipenv
-          pipenv install --dev --skip-lock --system
+          pip install --upgrade pip poetry
+          poetry install
           python -V
-          pipenv --version
-          pip list
+          poetry -V
+          poetry show
       - name: Test
-        run: pytest --nbval-lax notebooks/import-libraries.ipynb
+        run: poetry run pytest --nbval-lax notebooks/import-libraries.ipynb
