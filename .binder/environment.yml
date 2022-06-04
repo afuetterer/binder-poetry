@@ -3,8 +3,8 @@ dependencies:
   - nltk=3.7
   - pandas=1.4.2
   - requests=2.27.1
-  - stylecloud=0.5.2
-  - HanTa=0.2.0
+  # - stylecloud=0.5.2
+  # - HanTa=0.2.0
   - seaborn=0.11.2
   # versions are not important
   - session-info
