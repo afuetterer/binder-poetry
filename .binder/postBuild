@@ -2,18 +2,16 @@
 
 set -e
 
-# Install Python dependencies
-pip install --upgrade pip poetry
-poetry lock
-poetry export -f requirements.txt > /tmp/requirements.txt
-cat /tmp/requirements.txt
-pip install -r /tmp/requirements.txt
+# Update pip
+pip install --upgrade pip
 
 # Display installed versions
 python -V
-poetry -V
 jupyter --version
 pip list
 
 # Install NLTK corpora and tokenizers
-# python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+python -m nltk.downloader punkt stopwords
+
+# Strip output from Jupyter notebook cells
+nbstripout notebooks/*.ipynb
