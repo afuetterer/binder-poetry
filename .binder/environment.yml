@@ -9,3 +9,5 @@ dependencies:
   # versions are not important
   - session-info
   - nbstripout
+  - stylecloud
+  - HanTa
